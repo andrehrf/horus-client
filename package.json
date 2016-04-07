@@ -1,0 +1,26 @@
+{
+    "name": "horus-client",
+    "version": "0.0.1",
+    "description": "Horus client",
+    "author": "André Ferreira <andrehrf@gmail.com>",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/andrehrf/horus-client"
+    },
+    "keywords": [
+        "horus",
+        "real-time"
+    ],
+    "author": "André Ferreira <andrehrf@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/andrehrf/horus-client/issues"
+    },
+    "homepage": "https://github.com/andrehrf/horus-client",
+    "dependencies": {
+        "querystring": "^0.2.0",
+        "md5": "^2.0.0",
+        "crc-32": "^0.3.0"
+    }
+}
