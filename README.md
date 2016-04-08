@@ -11,7 +11,7 @@ $ npm install horus-client
 ## Usage
 
 ```js
-var Horus = require("./index.js");
+var Horus = require("horus-client");
 var horus = new Horus("http://localhost:9007");
 
 //Set links to watch
