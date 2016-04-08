@@ -21,7 +21,10 @@ module.exports = function(apiUrl){
          * @return void
          */
         set: function(setArr, cb){
-            var postData = querystring.stringify(setArr);
+            if(typeof setArr === "string")
+                var postData = querystring.stringify([setArr]);
+            else if(typeof setArr === "object" || typeof setArr === "array")
+                var postData = querystring.stringify(setArr);
             
             var options = {
                 host: urlArr.hostname,
@@ -39,8 +42,6 @@ module.exports = function(apiUrl){
                 
                 if(res.statusCode === 200){
                     res.on('error', function(error) {
-                        //console.log(error);
-                        
                         if(typeof cb === "function")
                             cb(error);
                     });
@@ -87,8 +88,6 @@ module.exports = function(apiUrl){
                 
                 if(res.statusCode === 200){
                     res.on('error', function(error) {
-                        //console.log(error);
-
                         if(typeof cb === "function")
                             cb(error);
                     });
@@ -137,8 +136,6 @@ module.exports = function(apiUrl){
                 
                 if(res.statusCode === 200){
                     res.on('error', function(error){
-                        //console.log(error);
-
                         if(typeof cb === "function")
                             cb(error);
                     });
